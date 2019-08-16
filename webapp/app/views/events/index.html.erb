@@ -1,0 +1,38 @@
+<div class="container">
+
+<h1>Listado de eventos</h1>
+
+<table class="table">
+   <thead class="thead-dark">
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Categoría</th>
+      <th scope="col">Modalidad</th>
+      <th scope="col">Lugar</th>
+      <th scope="col">Dirección</th>
+      <th scope="col">Fecha de inicio</th>
+      <th scope="col">Fecha de fin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.category.name %></td>
+        <td><%= event.modality.name %></td>
+        <td><%= event.place %></td>
+        <td><%= event.address %></td>
+        <td><%= event.date_initial %></td>
+        <td><%= event.date_final %></td>
+        <td><%= link_to 'Mostrar', event %></td>
+        <td><%= link_to 'Editar', edit_event_path(event) %></td>
+        <td><%= link_to 'Eliminar', event, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo evento', new_event_path %>
+</div>

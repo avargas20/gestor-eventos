@@ -1,0 +1,43 @@
+<div class="container">
+<%= form_with(model: event, local: true) do |form| %>
+  
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Nombre</label>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Categoría</label>
+    <%= form.collection_select :category_id, Category.order(:name), :id, :name, include_blank: true%>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Modalidad</label>
+    <%= form.collection_select :modality_id, Modality.order(:name), :id, :name, include_blank: true %>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Lugar</label>
+    <%= form.text_field :place, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Dirección</label>
+    <%= form.text_field :address, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Fecha de inicio</label>
+    <%= form.datetime_select :date_initial, class: 'form-control' %>
+  </div>
+
+  <div class="col-10">
+    <label for="exampleFormControlInput1">Fecha de fin</label>
+    <%= form.datetime_select :date_final, {class: 'form-control'}, {type: 'datetime-local'} %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>

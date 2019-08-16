@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  category: one
+  modality: one
+  place: MyString
+  address: MyString
+  date_initial: 2019-08-13 13:48:57
+  date_final: 2019-08-13 13:48:57
+
+two:
+  name: MyString
+  category: two
+  modality: two
+  place: MyString
+  address: MyString
+  date_initial: 2019-08-13 13:48:57
+  date_final: 2019-08-13 13:48:57

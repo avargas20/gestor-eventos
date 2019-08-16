@@ -1,0 +1,16 @@
+es:
+  activerecord:
+    attributes:
+      event:
+        name: 'Nombre'
+        category_id: 'Categoria'
+        modality_id: 'Modalidad'
+        place: 'Lugar'
+        address: 'Dirección'
+        date_initial: 'Fecha de inicio'
+        date_final: 'Fecha de fin'
+      user:
+        username: 'Usuario'
+        email: 'Correo'
+        password: 'Contraseña'
+        password_confirmation: 'Confirmación de Contraseña'
