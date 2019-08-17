@@ -1,41 +1,15 @@
 <div class="container">
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Nombre:</strong>
-  <%= @event.name %>
-</p>
-
-<p>
-  <strong>Categoría:</strong>
-  <%= @event.category %>
-</p>
-
-<p>
-  <strong>Modalidad:</strong>
-  <%= @event.modality %>
-</p>
-
-<p>
-  <strong>Lugar:</strong>
-  <%= @event.place %>
-</p>
-
-<p>
-  <strong>Dirección:</strong>
-  <%= @event.address %>
-</p>
-
-<p>
-  <strong>Fecha de inicio:</strong>
-  <%= @event.date_initial %>
-</p>
-
-<p>
-  <strong>Fecha de fin:</strong>
-  <%= @event.date_final %>
-</p>
-
+  <br>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><strong>Nombre: </strong><%= @event.name %></li>
+    <li class="list-group-item"><strong>Categoría:</strong><%= @event.category.name %></li>
+    <li class="list-group-item"><strong>Modalidad:</strong><%= @event.modality.name %></li>
+    <li class="list-group-item"><strong>Lugar:</strong><%= @event.place %></li>
+    <li class="list-group-item"><strong>Dirección:</strong><%= @event.address %></li>
+    <li class="list-group-item"><strong>Fecha de inicio:</strong><%= @event.date_initial %></li>
+    <li class="list-group-item"><strong>Fecha de fin:</strong><%= @event.date_final %></li>
+</ul>
+<br>
 <%= link_to 'Editar', edit_event_path(@event) %> |
 <%= link_to 'Atrás', events_path %>
 </div>
